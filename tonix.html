@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tonix</title>
+  <style>
+    :root{
+      --bg:#0b0f12;
+      --card:#0f1417;
+      --accent:#00d4ff;
+      --muted:#9fb3bb;
+      --glass: rgba(255,255,255,0.03);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+      background: linear-gradient(180deg,#071018 0%,var(--bg) 100%);
+      color:#e6f7fb;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+      padding:28px;
+    }
+    .container{max-width:880px;margin:0 auto}
+    header{display:flex;align-items:center;gap:16px;margin-bottom:22px}
+    .avatar{
+      width:72px;height:72px;border-radius:12px;overflow:hidden;border:2px solid rgba(255,255,255,0.04);
+      flex:0 0 72px;background:var(--glass);
+    }
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+    .brand h1{margin:0;font-size:20px;color:var(--accent)}
+    .brand p{margin:4px 0 0;color:var(--muted);font-size:13px}
+    nav{margin-top:10px;display:flex;gap:10px;flex-wrap:wrap}
+    nav a{
+      color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:8px;background:transparent;
+      border:1px solid rgba(255,255,255,0.02);font-size:13px;
+    }
+    main{margin-top:18px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+    .card{
+      background:linear-gradient(180deg,rgba(255,255,255,0.01), rgba(255,255,255,0.00));
+      border:1px solid rgba(255,255,255,0.03);
+      padding:14px;border-radius:10px;
+      min-height:140px;
+    }
+    .card h3{margin:0 0 8px;font-size:16px}
+    .card .meta{color:var(--muted);font-size:12px;margin-bottom:10px}
+    .empty{color:rgba(255,255,255,0.12);font-style:italic;border-radius:6px;padding:10px;background:rgba(255,255,255,0.01)}
+    footer{margin-top:20px;color:var(--muted);font-size:13px;text-align:center}
+    @media (max-width:560px){
+      header{flex-direction:row;align-items:center}
+      .brand h1{font-size:18px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="avatar">
+        <img src="https://i.ibb.co/6tL1r5n/CpKmztqW.jpg" alt="صورة البروفايل">
+      </div>
+      <div class="brand">
+        <h1>Tonix</h1>
+        <p>موقع بسيط لعرض مقالات — حرّر المحتوى واملأها كما تريد</p>
+        <nav>
+          <a href="#article1">مقال 1</a>
+          <a href="#article2">مقال 2</a>
+          <a href="#article3">مقال 3</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="articles" aria-label="المقالات">
+        <div class="grid">
+          <article class="card" id="article1">
+            <h3>مقال 1</h3>
+            <div class="meta">تاريخ: — | مؤلف: Tonix</div>
+            <div class="empty">هذا مكان لكتابة محتوى المقال الأول. اكتب ما تريد هنا.</div>
+          </article>
+
+          <article class="card" id="article2">
+            <h3>مقال 2</h3>
+            <div class="meta">تاريخ: — | مؤلف: Tonix</div>
+            <div class="empty">هذا مكان لكتابة محتوى المقال الثاني. اكتب ما تريد هنا.</div>
+          </article>
+
+          <article class="card" id="article3">
+            <h3>مقال 3</h3>
+            <div class="meta">تاريخ: — | مؤلف: Tonix</div>
+            <div class="empty">هذا مكان لكتابة محتوى المقال الثالث. اكتب ما تريد هنا.</div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      © Tonix — بسيط وسهل. صلّح، عدّل، وانشر.
+    </footer>
+  </div>
+</body>
+</html>
