@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ilyeselmana02.github.io/Tonix_dz/sitemap.xml
